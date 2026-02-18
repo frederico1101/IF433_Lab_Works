@@ -1,17 +1,16 @@
 package week03
 
 fun main() {
-    val e = Employee( "Budi")
 
-    //1. Test validasi salary
-    e.salary = -1000 // harusnya print error
-    e.salary = 5000000
-    println("Gaji: ${e.salary}")
+    println("=== WEAPON TEST ===")
 
-    //2. test encapsulation
-    e.increasePerformance()
-    //e.performancerating = 5 // coba uncomment, pasti marah(Error)
+    val sword = Weapon("Dragon Slayer")
 
-    //3. test computed property
-    println("Pajak yang harus dibayar: ${e.tax}")
+    sword.damage = -50      // Harus gagal
+    println("Damage sekarang: ${sword.damage}")
+
+    sword.damage = 9999     // Harus jadi 1000
+    println("Damage sekarang: ${sword.damage}")
+
+    println("Tier weapon: ${sword.tier}")
 }
