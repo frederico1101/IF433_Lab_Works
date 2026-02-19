@@ -1,17 +1,14 @@
 package week02
 
-class Student (
+class Student(
     val name: String,
-    val nim: String,
-    var major: String,
-){
+    var nim: String,
+    var major: String
+) {
 
-}
-
-class Student (val name: String, var nim: String, var major: String,) {
     init {
-        //cek panjang nim
-        if(nim.length != 5) {
+        // cek panjang nim
+        if (nim.length != 5) {
             println("WARNING: Objek tercipta dengan NIM ($nim) yang tidak valid!")
             println("Data mahasiswa $name mungkin akan bermasalah di sistem.")
         } else {
