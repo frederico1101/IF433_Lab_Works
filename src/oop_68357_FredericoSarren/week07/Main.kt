@@ -41,4 +41,12 @@ fun main(){
     println("\n=== TEST GAME MANAGER ===")
     GameManager.startGame()
     GameManager.startGame() // Harus ke-block (Singleton)
+
+    println("\n=== TEST RARITY ===")
+    println("Drop chance LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    println("\n=== TEST FACTORY ===")
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Senjata awal: ${starterWeapon.item}")
+    println("Durability: ${starterWeapon.durability}")
 }
