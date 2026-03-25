@@ -41,22 +41,4 @@ fun main(){
     println("\n=== TEST GAME MANAGER ===")
     GameManager.startGame()
     GameManager.startGame() // Harus ke-block (Singleton)
-
-    println("\n=== TEST RARITY ===")
-    println("Drop chance LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}%")
-
-    println("\n=== TEST FACTORY ===")
-    val starterWeapon = Weapon.forgeStarterSword()
-    println("Senjata awal: ${starterWeapon.item}")
-    println("Durability: ${starterWeapon.durability}")
-
-    println("\n=== UPGRADE SENJATA (COPY) ===")
-    val upgradedItem = starterWeapon.item.copy(damage = 25)
-    println("Senjata setelah upgrade: $upgradedItem")
-
-    println("\n=== SIMULASI EVENT ===")
-    processEvent(BattleState.SafeZone)
-    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
-    processEvent(BattleState.LootDropped(upgradedItem))
-    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
