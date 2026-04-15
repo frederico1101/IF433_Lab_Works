@@ -17,11 +17,11 @@ fun main() {
             parser.parseProduct(raw)
                 ?.let { product ->
                     println("Parsed Product: $product")
-                    parser.checkout(product);
+                    parser.checkout(product)
                 }
 
         } catch (e: IllegalArgumentException) {
-            println("ERROR: ${e.message}");
+            println("ERROR: ${e.message}")
         }
     }
 }
