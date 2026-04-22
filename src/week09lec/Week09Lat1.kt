@@ -14,7 +14,7 @@ fun main() {
     println("Siswa bernama ${arSiswa[1]}");
 
     //munculin semua orang ---> for-each
-    for(a in arSiswa) {
+    for (a in arSiswa) {
         print("Siswa " + a + " dan ");
     }
 
@@ -62,4 +62,36 @@ fun main() {
     arKHS["Cinta"] = 99
     println(arKHS);
 
+    println("========== LAMBDA =========");
+    //function biasa
+    fun tambah(a: Int, b: Int): Int {
+        return a + b;
+    }
+    println("hasil penambahan ${tambah(a=5, b=3)}");
+
+    //function lambda -> tulisnya kesamping/horizontal
+    val kurang = {a:Int, b:Int -> a-b }
+    println("hasil pengurangan ${kurang(5,3)}");
+
+    println("========== LAMBDA { IT } =========");
+    val pangkat = {a:Int -> a*a}
+    val hasilPangkat:(Int)-> Int = {it * it}
+    println("Hasil pangkat ${hasilPangkat(5)}");
+
+    println("========== FOREACH BIASA =========");
+    for (a in arMatkul) {
+        println(a);
+    }
+
+    println("========== FOREACH IT =========");
+    arMatkul.forEach {
+        println(it);
+    }
+
+    println("========== FOREACH VARIABLE =========");
+    arMatkul.forEach {
+        mk -> println(mk);
+    }
+
 }
+
