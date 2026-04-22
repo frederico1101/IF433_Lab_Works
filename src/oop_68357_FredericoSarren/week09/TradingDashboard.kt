@@ -37,6 +37,8 @@ fun main() {
             "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)"
         }
 
-
-
+    //pipeline tambahan : ekstraksi unik
+    val uniquePairs = tradeHistory
+        .map { it.pair }
+        .toSet()
 }
