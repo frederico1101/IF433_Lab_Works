@@ -15,7 +15,7 @@ fun main() {
     val closedTrades = tradeHistory
         .filter { it.status == "CLOSED" }
 
-   //pipeline 2
+    //pipeline 2
     val winningTrades = closedTrades
         .filter { it.roe > 0 }
 
@@ -23,7 +23,7 @@ fun main() {
     val losingTrades = closedTrades
         .filter { it.roe <= 0 }
 
-   //pipeline 4
+    //pipeline 4
     val topPerformersString = winningTrades
         .sortedByDescending { it.roe }
         .map {
