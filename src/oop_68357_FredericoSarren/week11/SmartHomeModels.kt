@@ -1,0 +1,8 @@
+package oop_68357_FredericoSarren.week11
+
+data class SmartDevice(
+    var name: String,
+    var category: String,
+    var isOnline: Boolean = false,
+    var powerLoad: Int = 0
+)
