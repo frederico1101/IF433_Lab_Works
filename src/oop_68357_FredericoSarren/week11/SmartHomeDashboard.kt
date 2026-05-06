@@ -51,4 +51,13 @@ fun main() {
     with(homeDevices) {
         println("Total perangkat terdaftar: ${this.size}")
     }
+
+    val totalPower = homeDevices.run {
+        var total = 0
+        for (device in this) {
+            total += device.powerLoad
+        }
+        total
+    }
+    println("Total penggunaan daya: $totalPower Watt")
 }
