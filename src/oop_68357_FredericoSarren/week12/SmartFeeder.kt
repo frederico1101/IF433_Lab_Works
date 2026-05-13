@@ -29,9 +29,9 @@ fun dispenseKibble(
 
 fun main() {
 
-
     var currentKibbleStock = 50
 
+    println("=== JADWAL MAKAN PAGI ===")
     try {
 
         currentKibbleStock = dispenseKibble(
