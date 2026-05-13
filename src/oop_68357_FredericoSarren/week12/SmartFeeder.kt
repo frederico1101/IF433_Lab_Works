@@ -41,15 +41,12 @@ fun main() {
         )
 
     } catch (e: DispenserJamException) {
-
         println("Hardware Error: ${e.message}")
-
     } catch (e: FoodEmptyException) {
-
         println("Food Error: ${e.message}")
-
     } catch (e: Exception) {
-
         println("General Error: ${e.message}")
+    } finally {
+        println("Siklus pengecekan dispenser pagi selesai.")
     }
 }
